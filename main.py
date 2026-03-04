@@ -1,4 +1,7 @@
-user_char = input("Enter a character: ")
+number = input("Enter a number: ")
 
-if user_char in 'aeiouAEIOU':
-    print(f"{user_char} is a vowel.")
+a, b = 0, 1
+
+for i in range(int(number)):
+    print(a, end=" ")
+    a,b = b, a+b
