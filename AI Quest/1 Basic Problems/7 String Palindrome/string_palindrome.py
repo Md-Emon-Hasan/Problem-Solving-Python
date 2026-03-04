@@ -1,6 +1,10 @@
 # 7. String Palindrome: Write a Python function to check if a given string is a palindrome or not.
 
-def palindrome(s:str)->bool:
+def is_palindrome(s:str) -> bool:
     return s == s[::-1]
-print(palindrome('mom'))
-print(palindrome('cat'))
+
+user_input = input("Enter a string to check if it's a palindrome: ")
+if is_palindrome(user_input):
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")

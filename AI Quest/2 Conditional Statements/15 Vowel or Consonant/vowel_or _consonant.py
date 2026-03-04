@@ -2,7 +2,7 @@
 
 char = input("enter a character:... ")
 
-if char in 'aeiou':
+if char in 'aeiouAEIOU':
     print(char, 'is vowel')
 else:
     print(char, 'is consonent')

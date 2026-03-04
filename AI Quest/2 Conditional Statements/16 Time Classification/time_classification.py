@@ -2,11 +2,11 @@
 
 hour = int(input('enter your hour(0-23):.. '))
 
-if hour <= 12:
-    print('Good Moorning')
-elif hour >= 12 and hour < 17:
-    print('Good Aftrenoon')
-elif hour >= 17 and hour < 21:
-    print('Good Evening')
+if 5 <= hour <= 11:
+    print("Good Morning")
+elif 12 <= hour <= 16:
+    print("Good Afternoon")
+elif 17 <= hour <= 20:
+    print("Good Evening")
 else:
-    print('Good Night')
+    print("Good Night")
