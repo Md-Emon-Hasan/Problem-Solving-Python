@@ -3,19 +3,14 @@
 # Take input from user
 N = int(input("Enter a number: "))
 
-if N <= 1:
-    print(f"{N} is not a prime number.")
+is_prime = True
+
+for i in range(2, N):
+    if N % i == 0:
+        is_prime = False
+        break
+    
+if is_prime and N > 0:
+    print(N, "Your number is prime")
 else:
-    i = 2
-    is_prime = True
-    
-    while i * i <= N:  # check divisibility up to sqrt(N)
-        if N % i == 0:
-            is_prime = False
-            break
-        i += 1
-    
-    if is_prime:
-        print(f"{N} is a prime number.")
-    else:
-        print(f"{N} is not a prime number.")
+    print(N,'Number not prime')

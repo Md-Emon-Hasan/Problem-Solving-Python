@@ -1,82 +1,71 @@
-# Factorial Calculator
+# Reverse String Using While Loop
 
 ## Problem
-
-Write a Python program using a **while loop** to calculate the factorial of a given number **N**.
+Write a Python program using a **while loop** to reverse a given string.
 
 Example
 
 Input
 ```
-5
+hello
 ```
 
 Output
 ```
-120
+olleh
 ```
 
 ---
 
 # Theory
 
-The **factorial** of a number N is the product of all positive integers from **1 to N**.
+A **string** is a sequence of characters.
 
-Mathematically:
+To reverse a string, we read characters **from the last index to the first index**.
 
-```
-N! = N × (N-1) × (N-2) × ... × 1
-```
-
-Example:
+If the string length is `n`, the last index is:
 
 ```
-5! = 5 × 4 × 3 × 2 × 1 = 120
+n - 1
 ```
 
-Special case:
-
-```
-0! = 1
-```
-
-A **while loop** repeats execution as long as a condition is true.
+We can iterate backward using a loop.
 
 ---
 
 # Approach
 
-1. Take input `N`
-2. Initialize `factorial = 1`
-3. Initialize counter `i = 1`
-4. Use a `while` loop until `i <= N`
-5. Multiply `factorial` by `i`
-6. Increment `i`
-7. Print the factorial
+1. Take string input
+2. Set index = `len(string) - 1`
+3. Initialize empty string
+4. Use `while` loop while index ≥ 0
+5. Append characters in reverse order
+6. Decrease index
 
 ---
 
 # Python Implementation
 
 ```python
-N = int(input())
+text = input()
 
-factorial = 1
-i = 1
+reversed_str = ""
+i = len(text) - 1
 
-while i <= N:
-    factorial *= i
-    i += 1
+while i >= 0:
+    reversed_str += text[i]
+    i -= 1
 
-print(factorial)
+print(reversed_str)
 ```
 
 ---
 
 # Key Idea
 
-Use a **multiplicative accumulator pattern**:
+Traverse the string **from end to start**:
 
 ```
-factorial *= i
+i = len(string) - 1
+while i >= 0
 ```

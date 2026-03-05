@@ -1,12 +1,13 @@
-# Take input from user
-N = int(input("Enter a number N: "))
+# 25. Sum of Even Numbers: Write a Python program using a while loop to calculate the sum of all even numbers between 1 and N, where N is taken as input from the user.
 
-sum_even = 0
-i = 2  # even number 2
+N = int(input("enter your number..."))
 
-# Loop through all even numbers up to N
-while i <= N:
-    sum_even += i
-    i += 2  # next even number
+total = 0
+n = 1
 
-print(f"Sum of all even numbers between 1 and {N} is: {sum_even}")
+while n <= N:
+    if n % 2 == 0:
+        total += n
+    n += 1
+    
+print(total)
