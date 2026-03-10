@@ -1,19 +1,11 @@
-number = [1,2,3,4,5]
-
-sum = 0
-maximum = number[0]
-minimum = number[0]
-
-for i in number:
-    sum += i
-    if i > maximum:
-        maximum = i
-    if i < minimum:
-        minimum = i
-        
-average = sum/len(number)
-
-print("sum:... ", sum)
-print("maximum:... ", maximum)
-print("Minimum:... ", minimum)
-print("Average:... ", average)
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    
+    total = a + b
+    diff = a - b
+    mul = a * b
+    
+    print(f'{a} + {b} => {total}')
+    print(f'{a} - {b} => {diff}')
+    print(f'{a} * {b} => {mul}')
